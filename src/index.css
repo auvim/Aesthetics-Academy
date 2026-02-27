@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", ui-serif, Georgia, serif;
+  
+  --color-aa-bg: #080808;
+  --color-aa-surface: #111111;
+  --color-aa-surface-hover: #1a1a1a;
+  --color-aa-accent: #C8102E;
+  --color-aa-accent-hover: #9E0C24;
+  --color-aa-text: #F8F5F0;
+  --color-aa-text-muted: rgba(248, 245, 240, 0.6);
+}
+
+body {
+  background-color: var(--color-aa-bg);
+  color: var(--color-aa-text);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-track { background: #111; }
+::-webkit-scrollbar-thumb { background: #C8102E; }
+
+@keyframes mqAnim {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: mqAnim 30s linear infinite;
+}
+
+.rd1 { transition-delay: 150ms !important; }
+.rd2 { transition-delay: 300ms !important; }
+.rd3 { transition-delay: 450ms !important; }
